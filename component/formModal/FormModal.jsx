@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import Input from '../input/input';
+
 import * as Yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { IconCheck } from '@/assets/svg';
-import { useSelector } from 'react-redux';
-import { getDataEdit } from '@/store/slice/useSlice';
+import Input from '../input/Input';
 
 const schema = Yup.object().shape({
     note: Yup.string().required('Please enter your description'),

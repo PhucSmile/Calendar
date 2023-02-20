@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@headlessui/react": "^1.7.7",
+        "@heroicons/react": "^2.0.16",
         "@heroicons/vue": "^2.0.15",
         "@hookform/resolvers": "^2.9.10",
         "@iconify/icons-heroicons-solid": "^1.2.6",
@@ -20,7 +21,6 @@
         "dayjs": "^1.11.7",
         "eslint": "8.32.0",
         "eslint-config-next": "13.1.4",
-        "framer-motion": "^8.5.2",
         "heroicons": "^2.0.15",
         "heroicons-react": "^1.4.1",
         "next": "13.1.4",

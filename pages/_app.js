@@ -1,5 +1,5 @@
 import { SessionProvider } from 'next-auth/react';
-import { AnimatePresence } from 'framer-motion';
+
 import '../styles/globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -20,12 +20,6 @@ function MyApp(props) {
             return <MainLayout>{page}</MainLayout>;
         };
 
-    const handleExitComplete = () => {
-        if (typeof window !== 'undefined') {
-            window.scrollTo({ top: 0 });
-        }
-    };
-
     return (
         <>
             <Head>
@@ -34,16 +28,14 @@ function MyApp(props) {
             </Head>
             <SessionProvider session={session}>
                 <Provider store={store}>
-                    <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-                        <ToastContainer
-                            theme="light"
-                            position="top-center"
-                            autoClose={1500}
-                            closeOnClick
-                            pauseOnHover={false}
-                        />
-                        {renderWithLayout(<Component {...pageProps} />)}
-                    </AnimatePresence>
+                    <ToastContainer
+                        theme="light"
+                        position="top-center"
+                        autoClose={1500}
+                        closeOnClick
+                        pauseOnHover={false}
+                    />
+                    {renderWithLayout(<Component {...pageProps} />)}
                 </Provider>
             </SessionProvider>
         </>
