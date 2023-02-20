@@ -126,7 +126,7 @@ const Day = ({ currentDay, isSmall = false, MonthIndex }) => {
                             <div
                                 key={index}
                                 onClick={() => setOpenModalMore(true)}
-                                className={`limit__text tags__section text-xs md:text-sm  bg-${item.color} ${
+                                className={`limit__text shadow tags__section text-xs md:text-sm  bg-${item.color} ${
                                     item.color === 'dark_blue'
                                         ? 'text-white after:bg-light_orange'
                                         : item?.color === 'light_orange'
