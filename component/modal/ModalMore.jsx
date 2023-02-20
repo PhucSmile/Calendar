@@ -13,7 +13,6 @@ export default function ModalMore({ setOpenModalMore, setOpenModalEdit, data, cu
     }
 
     const handleDelete = async (item) => {
-        console.log(item);
         await dispatch(deleteNote(item?.id));
         toast.success('Delete successfully');
     };

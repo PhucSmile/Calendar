@@ -28,7 +28,7 @@ export default function Modal({ setOpenModal, currentDay, title = 'Note', isEdit
 
     const onSubmit = async (values) => {
         const repeat = data.find((item) => item.title === values.note);
-        console.log('repeat', repeat);
+
         if (!repeat) {
             if (!isEdit) {
                 // add
