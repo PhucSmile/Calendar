@@ -76,7 +76,6 @@ export const useSlice = createSlice({
         // update note
         updateNote: (state, action) => {
             const newData = action.payload;
-            console.log('newData', newData);
             const isCheck = state.listNote.findIndex((item) => item.id === newData.id);
 
             if (isCheck >= 0) {

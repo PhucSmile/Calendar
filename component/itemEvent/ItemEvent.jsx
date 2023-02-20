@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import dayjs from 'dayjs';
-import { useSession } from 'next-auth/react';
+
 const ModalMore = dynamic(() => import('../modal/ModalMore').then((module) => module), {
     ssr: false,
 });
@@ -25,8 +25,6 @@ const listColor = [
 ];
 
 const ItemEvent = ({ data, disable = false }) => {
-    const { data: session } = useSession();
-
     const convertArray = [data];
     const [color, setColor] = useState();
     const [openModalItem, setOpenModalItem] = useState(false);
@@ -60,7 +58,7 @@ const ItemEvent = ({ data, disable = false }) => {
                         <span className="text-text text-sm md:text-base font-medium ">{data?.formatDate}</span>
                         <div className="flex items-center space-x-2">
                             <Image
-                                src={session?.user?.image || '/images/NoUser.png'}
+                                src="/images/NoUser.png"
                                 alt="Img-user"
                                 width={30}
                                 height={30}

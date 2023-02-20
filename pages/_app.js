@@ -1,5 +1,3 @@
-import { SessionProvider } from 'next-auth/react';
-
 import '../styles/globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -26,18 +24,17 @@ function MyApp(props) {
                 <title>Calendar</title>
                 <link rel="shortcut icon" href="/favicon.png" />
             </Head>
-            <SessionProvider session={session}>
-                <Provider store={store}>
-                    <ToastContainer
-                        theme="light"
-                        position="top-center"
-                        autoClose={1500}
-                        closeOnClick
-                        pauseOnHover={false}
-                    />
-                    {renderWithLayout(<Component {...pageProps} />)}
-                </Provider>
-            </SessionProvider>
+
+            <Provider store={store}>
+                <ToastContainer
+                    theme="light"
+                    position="top-center"
+                    autoClose={1500}
+                    closeOnClick
+                    pauseOnHover={false}
+                />
+                {renderWithLayout(<Component {...pageProps} />)}
+            </Provider>
         </>
     );
 }
