@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'SVN-Gilroy';
+        src: url('/fonts/SVN-Gilroy/SVN-GilroyBold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'SVN-Gilroy';
+        src: url('/fonts/SVN-Gilroy/SVN-GilroySemiBold.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'SVN-Gilroy';
+        src: url('/fonts/SVN-Gilroy/SVN-GilroyMedium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'SVN-Gilroy';
+        src: url('/fonts/SVN-Gilroy/SVN-Gilroy.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/Inter/Inter-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    html {
+        font-family: 'SVN-Gilroy';
+        font-weight: 400;
+        font-size: 14px;
+        color: #7a7b7a;
+    }
+}
+@layer components {
+    .btn-primary {
+        @apply font-medium border-[1px] border-solid border-dark_blue hover:border-dark_blue hover:bg-white hover:text-dark_blue text-white bg-dark_blue px-4 py-2 outline-none rounded-md   ease-in-out duration-300;
+    }
+    .btn-outline {
+        @apply btn-primary text-dark_blue bg-white hover:bg-dark_blue hover:text-white;
+    }
+    .btn-login {
+        @apply w-full h-[56px] flex justify-center items-center rounded-2xl;
+    }
+}
+
+.limit__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.tags__section {
+    position: relative;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+
+    margin-bottom: 4px;
+}
+.tags__section::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #0f4c81;
+}
